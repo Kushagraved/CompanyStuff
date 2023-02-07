@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "4ef19711-dc50-48c0-8e92-89d0f0cb9e9d",
+		"name": "CompanyStuff",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25266102"
+	},
+	"item": [
+		{
+			"name": "saveToDb",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"urlLink\": \"https://store-0001.s3.amazonaws.com/input.csv\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getTopRankedCompanies",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "updateCompany",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/company/8727cc61-8c4b-4285-8853-2db808392c04",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"company",
+						"8727cc61-8c4b-4285-8853-2db808392c04"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

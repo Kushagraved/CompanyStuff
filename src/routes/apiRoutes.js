@@ -1,10 +1,11 @@
-const express=require('express');
-const app=express();
-const productRoutes=require('./productRoutes');
+const express = require('express');
+const { saveToDb, getTopRankedCompanies, updateCompany } = require('../controllers/apiController');
+const router = express.Router();
 
-app.use('/products',productRoutes);
+// /api
+router.post('/save', saveToDb);
+router.get('/companies', getTopRankedCompanies);
+router.patch('/company/:id', updateCompany);
 
 
-
-module.exports=app;
-
+module.exports = router;
